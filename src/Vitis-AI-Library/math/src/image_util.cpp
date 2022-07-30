@@ -594,7 +594,6 @@ void transform_mean_scale(int w, int h, const uint8_t* src, int8_t* dst,
       
       }
     }
-    }
     // scale =0
     return vreinterpretq_s8_u8(
         vsubq_u8(vqsubq_u8(in_u8, high_mean), vqsubq_u8(low_mean, in_u8)));
