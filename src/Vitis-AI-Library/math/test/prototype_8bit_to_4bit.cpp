@@ -69,7 +69,7 @@ int8x8_t normalize(const int16x8_t data2, float mean_f, int fix_pos) {
    * */
   // const int16x8_t data4 =
   //     fix_pos > 0 ? vrshrq_n_s16(data3, 1) : vshlq_n_s16(data3, fix_pos);
-  const int16x8_t data4 = vrshrq_n_s16(data3, 1)
+  const int16x8_t data4 = vrshrq_n_s16(data3, 1);
   LOG_IF(INFO, ENV_PARAM(DEBUG_TEST))
       << "data4 = shift(data3, fixpos) " << to_string(data4) << std::endl;
   /* make sure it is between [-128, 127], saturate truncate
